@@ -34,14 +34,19 @@ namespace HackerNewsAngularTest.Server.Controllers
 
                 _logger.LogInformation($"Retrieved results from request. Populating object");
 
-                return Enumerable.Range(1, 1).Select(test => new News()
+                if (responseValues == null)
+                {
+                    return NotFound();
+                }
+
+                return Ok(Enumerable.Range(1, 1).Select(test => new News()
                 {
                     id = responseValues.id,
                     title = responseValues?.title ?? "Missing Title",
                     poll = responseValues?.poll ?? 0,
                     score = responseValues?.score ?? 0,
                     url = responseValues?.url ?? "Missing URL"
-                }).ToList();
+                }).ToList());
             }
             catch (Exception ex)
             {

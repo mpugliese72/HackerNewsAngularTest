@@ -2,7 +2,7 @@
 {
     public class News
     {
-        public int id { get; set; }
+        public int? id { get; set; }
         public bool? deleted { get; set; }
         public string? type { get; set; }
         public string? by { get; set; }
