@@ -1,0 +1,25 @@
+<h1>News Stories</h1>
+
+<hr/>
+
+<table *ngIf="newsstories">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Poll</th>
+      <th>Score</th>
+      <th>URL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let newsstory of newsstories">
+      <td>{{ newsstory.id }}</td>
+      <td>{{ newsstory.title }}</td>
+      <td>{{ newsstory.poll }}</td>
+      <td>{{ newsstory.score }}</td>
+      <td>{{ newsstory.url }}</td>
+    </tr>
+  </tbody>
+</table>
+

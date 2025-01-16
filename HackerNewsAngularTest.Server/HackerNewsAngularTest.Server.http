@@ -1,0 +1,6 @@
+@HackerNewsAngularTest.Server_HostAddress = http://localhost:5001
+
+GET {{HackerNewsAngularTest.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
